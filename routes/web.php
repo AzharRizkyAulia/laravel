@@ -14,5 +14,41 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hello World';
+});
+Route::get('tambah', function () {
+    $tambah = 30 + 30;
+    return $tambah;
+});
+Route::get('kurang', function () {
+    $kurang = 30 - 10;
+    return $kurang;
+});
+Route::get('kali', function () {
+    $kali = 30 * 3;
+    return $kali;
+});
+Route::get('bagi', function () {
+    $bagi = 30 / 3;
+    return $bagi;
+});
+
+//parameter waib
+Route::get('/nama-pemilik/{nama}/{tahun}', function ($nama, $tahun) {
+    return 'Nama Pemilik : ' .$nama .
+    '<br> Tahun Lahir : ' . $tahun
+    ;
+});
+
+// optional parameter
+Route::get('/nama-saya/{nama?}', function ($nama = null) {
+    return 'Nama Saya : ' .$nama;
+});
+
+Route::get('/hitung-luas-segitiga/{alas?}/{tinggi?}', function ($alas = 1,$tinggi = 1) {
+    $luas = 0.5 * $alas * $tinggi;
+    return 'Nilai Alas : ' .$alas. 
+    '<br>Nilai Tinggi : ' .$tinggi.
+    '<br>Hasil Luas Segitiga : ' . $luas
+    ;
 });
