@@ -5,7 +5,6 @@
     $data4 = 3921;
     $data5 = 5641;
     $status = 3;
-    $hasil = '<div style="color:pink"></div>';
 @endphp
 <h1>Profile {{ $data1 }} {{ $data2 }} {{ $data3 }}{{ $data4 }}{{ $data5 }}</h1>
 <br>
@@ -25,5 +24,3 @@
     Nilai Ke - {{ $i }} Ganjil <br>
 @endif
 @endfor
-
-{{!! $warna !!}}
