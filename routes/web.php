@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Hello World';
+    return view('profile.index');
 });
 Route::get('tambah', function () {
     $tambah = 30 + 30;
@@ -78,6 +78,6 @@ Route::get('profile', function () {
     return view('profile.index');
 });
 
-Route::get('album', function () {
-    return view('album');
-});
+Route::get('effbfguwgf', function () {
+    return view('profile.album');
+}) -> name('album');
