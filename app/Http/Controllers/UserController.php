@@ -13,8 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //halaman utama
-        return 'Halaman Index';
+        $depan = 'Azhar';
+        $belakang = 'Rizky';
+        return view('user.index', compact('depan','belakang'));
     }
 
     /**
@@ -25,7 +26,10 @@ class UserController extends Controller
     public function create()
     {
         //halaman menambah data
-        return 'halaman menambah data user';
+        $depan = 'Azhar';
+        $belakang = 'Rizky';
+        return view('user.create', compact('depan','belakang'));
+        
     }
 
     /**
@@ -48,7 +52,7 @@ class UserController extends Controller
     public function show($id)
     {
         //halaman menampilkan data by $id
-        return 'halaman menampilkan user ' .$id;
+        return view('user.show', compact('id'));
     }
 
     /**
